@@ -1,0 +1,21 @@
+@(address: Option[Address],
+handler: _root_.controllers.security.MyDeadboltHandler)(implicit request: Request[Any])
+
+
+@main("Welcome")(handler) {
+
+<section id="main_content_gray">
+    <div class="container">
+        <div class="row">
+            @if( address.isDefined ) {
+            @address.get.address1
+            } else {
+            Nothing to show
+            }
+        </div><!-- End row -->
+    </div>
+    <!-- End container -->
+</section>
+<!-- End section gray -->
+
+}

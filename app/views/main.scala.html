@@ -1,0 +1,24 @@
+@(title: String)(handler: _root_.controllers.security.MyDeadboltHandler)(content: Html)(implicit request: Request[Any])
+
+@import be.objectify.deadbolt.scala.views.html.restrict
+@import _root_.util.RolesEnum
+@import be.objectify.deadbolt.scala.views.html._
+@import be.objectify.deadbolt.core.utils.TemplateUtils._
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" lang="en"> <![endif]-->
+<html>
+<head>
+    <title>@title</title>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Favicons-->
+</head>
+<body>
+
+    <div class="page-content">
+        @content
+    </div>
+
+</body>
+</html>
