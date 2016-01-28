@@ -32,6 +32,7 @@ class TestDataLoader extends HasDatabaseConfig[JdbcProfile] with Logging
 
   def insertTestData(): Unit = {
     info("waiting test data to be inserted")
+    Await.result(db.run(Addresses.schema.create), 100.second)
     Await.result( db.run( insertAddresses ), 100.second )
     info("done test data dealing")
     ()

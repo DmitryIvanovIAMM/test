@@ -5,7 +5,7 @@ import play.api.test.FakeRequest
 import play.api.test.Helpers._
 import scala.language.implicitConversions
 
-class SchoolAdminContactSpec extends PlaySpec {
+class FirstSpec extends PlaySpec {
 
   "First Specification" should {
 
