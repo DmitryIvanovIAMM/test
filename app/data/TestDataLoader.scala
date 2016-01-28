@@ -18,8 +18,6 @@ class TestDataLoader extends HasDatabaseConfig[JdbcProfile] with Logging
   protected lazy val dbConfig = DatabaseConfigProvider.get[JdbcProfile](Play.current)
   import driver.api._
 
-  lazy val today = DateTime.now()
-
   lazy val insertAddresses =
     Addresses ++= Seq(
       Address(None, "111 Philips Blvd", "Princeton", "NY", "08540"),
