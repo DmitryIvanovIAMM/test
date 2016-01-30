@@ -17,7 +17,7 @@ object Application extends Controller
   import driver.api._
 
   def index = Action.async { implicit request =>
-    AddressDao.queryById(1).map {
+    AddressDao().queryById(1).map {
       address =>
         Ok(views.html.index(address, new MyDeadboltHandler))
     }

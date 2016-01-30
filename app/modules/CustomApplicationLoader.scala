@@ -2,7 +2,9 @@ package modules
 
 import com.typesafe.config.ConfigFactory
 import play.api.ApplicationLoader.Context
-import play.api.{Configuration, Mode}
+import play.api.db.DBApi
+import play.api.db.evolutions.Evolutions
+import play.api.{Play, Configuration, Mode}
 import play.api.inject.guice._
 import util.Logging
 
